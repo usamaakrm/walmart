@@ -69,9 +69,12 @@
             align-items: center;
         }
 
+        body{
+            background-color: rgba(170, 170, 170, 0.172);
+        }
+
         .wal-section {
             padding: 0rem 5rem;
-            background-color: rgba(170, 170, 170, 0.172);
         }
 
         .chat-app{
@@ -81,13 +84,13 @@
             padding: 1rem;
         }
 
-        .user-content{
+        .user-content p{
             background-color: #306fd6;
             color: white;
             padding: 10px;
             border-radius: 10px;
             text-align: right;
-            width: 200px;
+            width: 30%;
             margin-left: auto;
         }
 
@@ -143,7 +146,7 @@
             background-color: white;
             padding: 10px;
             box-shadow: 0 0 5px rgba(128, 128, 128, 0.639);
-            width: 300px;
+            width: 70%;
             border-radius: 10px;
             margin-left: 20px;
         }
@@ -204,6 +207,8 @@
         .inputs{
             display: flex;
             justify-content: space-between;
+            margin-top: 100px;
+            width: 670px;
         }
         
 
@@ -306,12 +311,17 @@
                 padding: 0 5px !important;
                 width: 100%;
                 overflow-x: hidden;
+                height: 100vh;
             }
 
             .inputs{
                 position: absolute;
-                bottom: 10px;
+                bottom: 0;
                 width: 98%;
+            }
+
+            .user-content p{
+                width: 40%;
             }
 
           }
@@ -368,15 +378,6 @@
                 </div>
                 <h6>12:05 PM</h6>
              </div>
-             <div class="wal-msg">
-                <div>
-                    <img src="./assets/img/Walmart.png" alt="">
-                </div>
-                <div class="msg-content">
-                    <p>I might be able to help you with that. select an option below or choose something else to talk to an agent.</p>
-                    <h6>12:05 PM</h6>
-                </div>
-             </div>
              <div>
                 <ul class="last-design flex">
                     <li>Gaming consoles restock</li>
@@ -384,11 +385,16 @@
                     <li>It's something else order</li>
                 </ul>
              </div>
-             <div class="inputs">
+             <div class="inputs" onclick="btnn()">
                     <h4>Type a message</h4>
                 <!-- <img src="./assets/wal/arrow.png" width="20" alt=""> -->
                 </div>
         </div>
     </section>
+    <script>
+        function btnn(){
+            alert("You can't reply to this message")
+        }
+    </script>
 </body>
 </html>
