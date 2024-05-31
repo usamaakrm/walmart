@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/Walmart.png">
+    <!--Stylesheet-->
+    <style>
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 250px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            overflow: hidden;
+            display: none;
+            margin-top: 10rem;
+            text-align: center;
+        }
+
+        .wrapper {
+            width: 250px;
+            display: flex;
+            animation: slide 1s infinite;
+            margin-top: 2rem;
+        }
+
+        .wrapper img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between !important;
+            padding: 0px 20px;
+            background-color: #306fd6;
+            color: white;
+        }
+
+        .nav-icons img {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+        }
+
+        .logo img {
+            width: 40px !important;
+        }
+
+        .nav-icons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wal-section {
+            padding: 0rem 5rem;
+            background-color: rgba(170, 170, 170, 0.172);
+        }
+
+        .chat-app{
+            width: 700px;
+            height: 100%;
+            background-color: white;
+            padding: 1rem;
+        }
+
+        .user-content{
+            background-color: #306fd6;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: right;
+            width: 200px;
+            margin-left: auto;
+        }
+
+        .last-design li{
+              list-style: none;
+              padding: 10px;
+              border-radius: 20px;
+              border: 2px solid black;
+              margin: 2rem 5px;
+              font-weight: 500;
+              font-size: 14px;
+        }
+
+        .inputs{
+            padding: 10px;
+            width: 100%;
+            background-color: white;
+            border: 2px solid grey;
+            color: grey;
+        }
+        
+        .inputs h4{
+            
+            font-weight: 400;
+        }
+        .user-msg{
+            text-align: right;
+            margin-top: 2px;
+        }
+
+        .wal-content {
+            margin: 2rem auto;
+        }
+
+        .wal-msg{
+            display: flex;
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .wal-msg img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .user-msg h6{
+            margin-top: 10px;
+            color: grey;
+        }
+
+        .wal-msg p{
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(128, 128, 128, 0.639);
+            width: 300px;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .wal-msg h6{
+            margin-left: 20px;
+            margin-top: 10px;
+            color: grey;
+        }
+
+        .search-bar {
+            background-color: white;
+            padding: 10px 30px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: left;
+            padding-left: 15px;
+            align-items: center;
+            color: black;
+        }
+
+        .search-bar img {
+            margin-right: 10px;
+        }
+
+        .flexed {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+            margin-top: 10px;
+        }
+
+        .flexed h5 {
+            font-weight: 400;
+        }
+
+        #cart {
+            margin-top: -3px;
+            width: 29px;
+            height: 29px;
+            object-fit: cover;
+        }
+
+        #voucher-data{
+            padding: 10px 20px !important;
+            border-radius: 10px;
+            border: 2px solid grey;
+            width: 400px;
+          }
+
+          #cart-img{
+            width: 25px !important;
+            height: 25px !important;
+            margin: 20px 10px;
+        }
+
+        .inputs{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+
+        .logo h3{
+            margin-left: 1rem;
+        }
+
+          @media screen and (max-width: 650px) {
+
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .container , .wrapper{
+                width: 100% !important;
+                overflow-x: hidden !important;
+            }
+
+            
+            .wal-section {
+                width: 100%;
+                overflow-x: hidden;
+                padding: 0rem;
+                background-color: rgba(170, 170, 170, 0.172);
+            }
+
+            .logo h3{
+                font-size: 14px;
+                margin-left: 5px;
+            }
+
+            
+            
+            #voucher-data{
+                width: 200px;
+              }
+
+            .search-bar{
+                display: none;
+            }
+
+            .wal-img{
+                width: 80% !important;
+            }
+
+            .vouch {
+                background-color: rgba(222, 222, 120, 0.582);
+                margin: 2rem 1rem;
+                width: 90% !important;
+            }
+
+            #voucher-data{
+                margin-top: 20px;
+            }
+    
+            .wrapper {
+                display: none !important;
+            }
+
+            nav{
+                padding: 0 10px !important;
+            }
+
+            .spin-loaders{
+                display: block;
+                margin-top: 2rem;
+                width: 100px !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .last-design{
+                width: 100%;
+                flex-wrap: wrap !important;
+                flex-direction: row;
+                padding: 0;
+                margin: 20px 0;
+                justify-content: center;
+                text-align: center;
+
+            }
+            
+            .last-design li{
+                width: 46% !important;
+                display: flex;
+                margin: 5px;
+                padding: 5px;
+                font-size: 12px;
+                text-align: center;
+                
+            }
+
+            .chat-app{
+                padding: 0 5px !important;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .inputs{
+                position: absolute;
+                bottom: 10px;
+                width: 98%;
+            }
+
+          }
+    </style>
+</head>
+
+<body>
+    <nav class="flex">
+        <div class="logo flex">
+            <img src="./assets/icons/w-logo.png" alt="">
+            <h3>Chat with Walmart</h3>
+        </div>
+        <div class="nav-icons cart">
+            <div class="flexeds">
+                <a href="https://www.walmart.com/">
+                    <img src="./assets/wal/min.png" alt="" id="cart-img">
+                </a>
+                <a href="https://www.walmart.com/">
+                    <img src="./assets/wal/close.png" alt="" id="cart-img">
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="flex wal-section">
+        <div class="chat-app ">
+             <div class="wal-msg">
+                <div>
+                    <img src="./assets/img/Walmart.png" alt="">
+                </div>
+                <div class="msg-content">
+                    <p>Hi, what can we help you with today?</p>
+                    <h6>12:05 PM</h6>
+                </div>
+             </div>
+             <div class="user-msg">
+                <div class="user-content">
+                    <p>Something else</p>
+                </div>
+                <h6>12:05 PM</h6>
+             </div>
+             <div class="wal-msg">
+                <div>
+                    <img src="./assets/img/Walmart.png" alt="">
+                </div>
+                <div class="msg-content">
+                    <p>Choose a common issue from belowor feel free to explain inyour own words.</p>
+                    <h6>12:05 PM</h6>
+                </div>
+             </div>
+             <div class="user-msg">
+                <div class="user-content">
+                    <p>Out of stock items</p>
+                </div>
+                <h6>12:05 PM</h6>
+             </div>
+             <div class="wal-msg">
+                <div>
+                    <img src="./assets/img/Walmart.png" alt="">
+                </div>
+                <div class="msg-content">
+                    <p>I might be able to help you with that. select an option below or choose something else to talk to an agent.</p>
+                    <h6>12:05 PM</h6>
+                </div>
+             </div>
+             <div>
+                <ul class="last-design flex">
+                    <li>Gaming consoles restock</li>
+                    <li>Other Out of Stock Items</li>
+                    <li>It's something else order</li>
+                </ul>
+             </div>
+             <div class="inputs">
+                    <h4>Type a message</h4>
+                <!-- <img src="./assets/wal/arrow.png" width="20" alt=""> -->
+                </div>
+        </div>
+    </section>
+</body>
+</html>
